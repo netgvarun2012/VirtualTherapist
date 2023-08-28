@@ -321,8 +321,10 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 #         </style>
 #     """, unsafe_allow_html=True)
     if st.sidebar.button("Open External Audio Recorder"):
+        url = 'https://voice-recorder-online.com/'
+        webbrowser.open_new_tab(url)
         # Redirect the user to the external website
-        st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
+        #st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
 
 #     if st.sidebar.button("Record a 4 sec audio!", key="record_button", help="Click to start recording", on_click=set_stage, args=(1,)):
 #     # Your button click action here
