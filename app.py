@@ -322,7 +322,7 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 #     """, unsafe_allow_html=True)
     if st.sidebar.button("Open External Audio Recorder"):
         # Redirect the user to the external website
-        st.markdown("Redirecting to the [external audio recorder](https://voice-recorder-online.com/).")
+        st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
 
 #     if st.sidebar.button("Record a 4 sec audio!", key="record_button", help="Click to start recording", on_click=set_stage, args=(1,)):
 #     # Your button click action here
@@ -376,7 +376,10 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 
             # Store the value of emo in the session state
             st.session_state.emo = emo
-
+            if st.button(button_label):
+                # Retrieve prompt from the emotion
+                emo = st.session_state.emo
+                GenerateText(emo,gpt_tokenizer,gpt_model)
         # except OSError as e:
         #     if "[Errno -9996]" in str(e) and "Invalid input device (no default output device)" in str(e):
         #         st.error("Recording not possible as no input device on cloud platforms. Please upload instead.")
@@ -384,10 +387,6 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
         #         st.error(f"An error occurred while recording: {str(e)}")
 
     # if st.session_state.stage > 0:
-    if st.button(button_label):
-        # Retrieve prompt from the emotion
-        emo = st.session_state.emo
-        GenerateText(emo,gpt_tokenizer,gpt_model)  
 
 if __name__ == '__main__':
     config()
