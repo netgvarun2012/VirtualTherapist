@@ -63,6 +63,15 @@ bert_model_name = "bert-base-uncased"
 def config():
     # Loading Image using PIL
     im = Image.open('./icon.png')
+
+    if st.sidebar.button("Open External Audio Recorder"):
+        # url = 'https://voice-recorder-online.com/'
+        # # webbrowser.open_new_tab(url)
+        # st.markdown(f'''
+        # <a href={url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
+        # ''', unsafe_allow_html=True)   
+        st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
+       
     
     # Set the page configuration with the title and icon
     st.set_page_config(page_title="Virtual Therapist", page_icon=im)
@@ -320,13 +329,7 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 #                 background-color: darkred; /* Change background color on hover */
 #             }
 #         </style>
-#     """, unsafe_allow_html=True)
-    if st.sidebar.button("Open External Audio Recorder"):
-        url = 'https://voice-recorder-online.com/'
-        # webbrowser.open_new_tab(url)
-        st.markdown(f'''
-        <a href={url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
-        ''', unsafe_allow_html=True)        
+#     """, unsafe_allow_html=True)  
 # Redirect the user to the external website
         #st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
 
