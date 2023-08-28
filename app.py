@@ -378,14 +378,12 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
             try:
 
                 audio_array, sr = librosa.load(preprocessWavFile(temp_filename), sr=None)
-                st.sidebar.markdown("<p style='font-size: 14px; font-weight: bold;'>Generating transcriptions! Please wait...</p>", unsafe_allow_html=True)
-
-                transcription = speechtoText(temp_filename)
-                
-                emo = predict(audio_array,ser_model,2,tokenizer,transcription)
-                
-                # Display the transcription in a textbox
-                st.sidebar.text_area("Transcription", transcription, height=25)      
+                #st.sidebar.markdown("<p style='font-size: 14px; font-weight: bold;'>Generating transcriptions! Please wait...</p>", unsafe_allow_html=True)
+                with st.spinner(st.markdown("<p style='font-size: 14px; font-weight: bold;'>Generating transcriptions in the side pane! Please wait...</p>", unsafe_allow_html=True)):
+                    transcription = speechtoText(temp_filename)
+                    emo = predict(audio_array,ser_model,2,tokenizer,transcription)
+                    # Display the transcription in a textbox
+                    st.sidebar.text_area("Transcription", transcription, height=25)      
             except:
                 st.write("Inference impossible, a problem occurred with your audio or your parameters, we apologize :(")
   
