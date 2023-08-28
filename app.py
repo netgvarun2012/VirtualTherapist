@@ -56,20 +56,17 @@ label_mapping = ['angry', 'calm', 'disgust', 'fearful', 'happy', 'sad', 'surpris
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Create the path to the file in the parent directory
-parent_dir = os.path.abspath(os.path.join(current_dir, "/EmotionDetector/Models/"))
-#file_path = os.path.join(parent_dir, "MultiModal/MultiModal_model_state_dict.pth")
+tokenizer1_dir = os.path.abspath(os.path.join(current_dir, "/EmotionDetector/Models/Tokenizer/"))
 
 # Define your model name from the Hugging Face model hub
 model_weights_path = "https://huggingface.co/netgvarun2005/MultiModalBertHubert/resolve/main/MultiModal_model_state_dict.pth"
 # GenAI model
-parent_dir2 = os.path.abspath(os.path.join(current_dir, "/GenAI/"))
+tokenizer2_dir = os.path.abspath(os.path.join(current_dir, "/GenAI/Tokenizer/"))
 
 
 # Emo Detector
 model_id = "facebook/hubert-base-ls960"
 bert_model_name = "bert-base-uncased"
-tokenizerDir = os.path.join(parent_dir, 'Tokenizer\\')
-
 
 def config():
     # Loading Image using PIL
@@ -204,10 +201,10 @@ def load_model():
     multiModel.load_state_dict(torch.hub.load_state_dict_from_url(model_weights_path, map_location=device), strict=False)
 
    # multiModel.load_state_dict(torch.load(file_path + "/MultiModal_model_state_dict.pth",map_location=device),strict=False)
-    tokenizer = AutoTokenizer.from_pretrained(tokenizerDir) 
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer1_dir) 
 
     # GenAI
-    tokenizer_gpt = AutoTokenizer.from_pretrained(os.path.join(parent_dir2,"Tokenizer"), pad_token='<|pad|>',bos_token='<|startoftext|>',eos_token='<|endoftext|>')
+    tokenizer_gpt = AutoTokenizer.from_pretrained(tokenizer2_dir, pad_token='<|pad|>',bos_token='<|startoftext|>',eos_token='<|endoftext|>')
     model_gpt = AutoModelForCausalLM.from_pretrained("netgvarun2005/GPTVirtualTherapist")
    
     return multiModel,tokenizer,model_gpt,tokenizer_gpt
