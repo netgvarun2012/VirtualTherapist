@@ -52,16 +52,13 @@ speech_model = whisper.load_model("base")
 num_labels=7
 label_mapping = ['angry', 'calm', 'disgust', 'fearful', 'happy', 'sad', 'surprised']
 
-# Get the path of the current directory
-current_dir = os.path.dirname(os.path.abspath(__file__))
-print(f'current_dir is {current_dir}\n')
 # Create the path to the file in the parent directory
-tokenizer1_dir = os.path.abspath(os.path.join(current_dir, "/EmotionDetector/Models/Tokenizer/"))
+tokenizer1_dir = "./EmotionDetector/Models/Tokenizer/"
 
 # Define your model name from the Hugging Face model hub
 model_weights_path = "https://huggingface.co/netgvarun2005/MultiModalBertHubert/resolve/main/MultiModal_model_state_dict.pth"
 # GenAI model
-tokenizer2_dir = os.path.abspath(os.path.join(current_dir, "/GenAI/Tokenizer/"))
+tokenizer2_dir = "./GenAI/Tokenizer/"
 
 
 # Emo Detector
