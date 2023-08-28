@@ -289,11 +289,11 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
     button_label = "Show Helpful Tips"
 #     recorded = False  # Initialize the recording state as False
 
-    if 'stage' not in st.session_state:
-        st.session_state.stage = 0
+    # if 'stage' not in st.session_state:
+    #     st.session_state.stage = 0
 
-    def set_stage(stage):
-        st.session_state.stage = stage
+    # def set_stage(stage):
+    #     st.session_state.stage = stage
 
 #    # Add custom CSS styles
 #     st.markdown("""
@@ -320,6 +320,9 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 #             }
 #         </style>
 #     """, unsafe_allow_html=True)
+    if st.sidebar.button("Open External Audio Recorder"):
+        # Redirect the user to the external website
+        st.markdown("Redirecting to the [external audio recorder](https://voice-recorder-online.com/).")
 
 #     if st.sidebar.button("Record a 4 sec audio!", key="record_button", help="Click to start recording", on_click=set_stage, args=(1,)):
 #     # Your button click action here
@@ -380,11 +383,11 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
         #     else:
         #         st.error(f"An error occurred while recording: {str(e)}")
 
-    if st.session_state.stage > 0:
-        if st.button(button_label,on_click=set_stage, args=(2,)):
-            # Retrieve prompt from the emotion
-            emo = st.session_state.emo
-            GenerateText(emo,gpt_tokenizer,gpt_model)  
+    # if st.session_state.stage > 0:
+    if st.button(button_label):
+        # Retrieve prompt from the emotion
+        emo = st.session_state.emo
+        GenerateText(emo,gpt_tokenizer,gpt_model)  
 
 if __name__ == '__main__':
     config()
