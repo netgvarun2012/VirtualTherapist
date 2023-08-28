@@ -63,8 +63,11 @@ bert_model_name = "bert-base-uncased"
 def config():
     # Loading Image using PIL
     im = Image.open('./icon.png')
+    
+    # Set the page configuration with the title and icon
+    st.set_page_config(page_title="Virtual Therapist", page_icon=im)
 
-    if st.sidebar.button("Open External Audio Recorder"):
+    if st.sidebar.markdown("**Open External Audio Recorder**"):
         # url = 'https://voice-recorder-online.com/'
         # # webbrowser.open_new_tab(url)
         # st.markdown(f'''
@@ -72,10 +75,7 @@ def config():
         # ''', unsafe_allow_html=True)   
         st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
        
-    
-    # Set the page configuration with the title and icon
-    st.set_page_config(page_title="Virtual Therapist", page_icon=im)
-    
+
     # Add custom CSS styles
     st.markdown("""
         <style>
