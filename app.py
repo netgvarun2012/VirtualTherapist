@@ -4,10 +4,8 @@ import matplotlib.pyplot as plt
 import os
 import librosa
 import time
-import IPython.display as ipd
 from matplotlib import cm
 import soundfile as sf
-from IPython.display import clear_output
 import sounddevice as sd
 import torch
 import torch.nn as nn
@@ -59,7 +57,10 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Create the path to the file in the parent directory
 parent_dir = os.path.abspath(os.path.join(current_dir, "../EmotionDetector/Models/"))
-file_path = os.path.join(parent_dir, "MultiModal/MultiModal_model_state_dict.pth")
+#file_path = os.path.join(parent_dir, "MultiModal/MultiModal_model_state_dict.pth")
+
+# Define your model name from the Hugging Face model hub
+model_weights_path = "https://huggingface.co/netgvarun2005/MultiModalBertHubert/blob/main/MultiModal_model_state_dict.pth"
 
 # GenAI model
 parent_dir2 = os.path.abspath(os.path.join(current_dir, "../GenAI/"))
@@ -199,7 +200,11 @@ def preprocessWavFile(wavfile):
 def load_model():
     # Load the model
     multiModel = MultimodalModel(bert_model_name, num_labels)
-    multiModel.load_state_dict(torch.load(file_path + "/MultiModal_model_state_dict.pth",map_location=device),strict=False)
+
+    # Load the model weights directly from Hugging Face Spaces
+    multiModel.load_state_dict(torch.hub.load_state_dict_from_url(model_weights_path, map_location=device), strict=False)
+
+   # multiModel.load_state_dict(torch.load(file_path + "/MultiModal_model_state_dict.pth",map_location=device),strict=False)
     tokenizer = AutoTokenizer.from_pretrained(tokenizerDir) 
 
     # GenAI
