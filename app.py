@@ -289,8 +289,8 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
     button_label = "Show Helpful Tips"
 #     recorded = False  # Initialize the recording state as False
 
-#     if 'stage' not in st.session_state:
-#         st.session_state.stage = 0
+     if 'stage' not in st.session_state:
+         st.session_state.stage = 0
 
     def set_stage(stage):
         st.session_state.stage = stage
