@@ -60,8 +60,7 @@ parent_dir = os.path.abspath(os.path.join(current_dir, "../EmotionDetector/Model
 #file_path = os.path.join(parent_dir, "MultiModal/MultiModal_model_state_dict.pth")
 
 # Define your model name from the Hugging Face model hub
-model_weights_path = "https://huggingface.co/netgvarun2005/MultiModalBertHubert/blob/main/MultiModal_model_state_dict.pth"
-
+model_weights_path = "https://huggingface.co/netgvarun2005/MultiModalBertHubert/resolve/main/MultiModal_model_state_dict.pth"
 # GenAI model
 parent_dir2 = os.path.abspath(os.path.join(current_dir, "../GenAI/"))
 
