@@ -327,18 +327,12 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
         # Apply bold styling to the button label
         st.sidebar.markdown("<span style='font-weight: bolder;'>Record a 4 sec audio!</span>", unsafe_allow_html=True)
 
+
         # recorded = True  # Set the recording state to True after recording
 
         # Add your audio recording code here
         output_wav_file = "output.wav"
-
-        try:
-            record_audio(output_wav_file, duration=4)
-        except OSError as e:
-            if "[Errno -9996]" in str(e) and "Invalid input device (no default output device)" in str(e):
-                st.error("Recording not possible as no input device on cloud platforms. Please upload instead.")
-            else:
-                st.error(f"An error occurred while recording: {str(e)}")
+        record_audio(output_wav_file, duration=4)
         
         # # Use a div to encapsulate the audio element and apply the border
         with st.sidebar.markdown('<div class="audio-container">', unsafe_allow_html=True):
