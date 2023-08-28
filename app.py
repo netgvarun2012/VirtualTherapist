@@ -334,32 +334,33 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 
         try:
             record_audio(output_wav_file, duration=4)
+        
+            # # Use a div to encapsulate the audio element and apply the border
+            with st.sidebar.markdown('<div class="audio-container">', unsafe_allow_html=True):
+                # Play recorded sound
+                st.audio(output_wav_file, format="wav")    
+
+            audio_array, sr = librosa.load(preprocessWavFile(output_wav_file), sr=None)
+            st.sidebar.markdown("<p style='font-size: 14px; font-weight: bold;'>Generating transcriptions! Please wait...</p>", unsafe_allow_html=True)
+
+            transcription = speechtoText(output_wav_file)
+            
+            emo = predict(audio_array,ser_model,2,tokenizer,transcription)
+            
+            # Display the transcription in a textbox
+            st.sidebar.text_area("Transcription", transcription, height=25)        
+
+            txt = f"You seem to be <b>{(emo2promptMapping[emo]).capitalize()}!</b>\n Click on 'Show Helpful Tips' button to proceed further."
+            st.markdown(f"<div class='mobile-screen' style='font-size: 24px;'>{txt} </div>", unsafe_allow_html=True)
+
+            # Store the value of emo in the session state
+            st.session_state.emo = emo
+
         except OSError as e:
             if "[Errno -9996]" in str(e) and "Invalid input device (no default output device)" in str(e):
                 st.error("Recording not possible as no input device on cloud platforms. Please upload instead.")
             else:
                 st.error(f"An error occurred while recording: {str(e)}")
-        
-        # # Use a div to encapsulate the audio element and apply the border
-        with st.sidebar.markdown('<div class="audio-container">', unsafe_allow_html=True):
-            # Play recorded sound
-            st.audio(output_wav_file, format="wav")    
-
-        audio_array, sr = librosa.load(preprocessWavFile(output_wav_file), sr=None)
-        st.sidebar.markdown("<p style='font-size: 14px; font-weight: bold;'>Generating transcriptions! Please wait...</p>", unsafe_allow_html=True)
-
-        transcription = speechtoText(output_wav_file)
-        
-        emo = predict(audio_array,ser_model,2,tokenizer,transcription)
-        
-        # Display the transcription in a textbox
-        st.sidebar.text_area("Transcription", transcription, height=25)        
-
-        txt = f"You seem to be <b>{(emo2promptMapping[emo]).capitalize()}!</b>\n Click on 'Show Helpful Tips' button to proceed further."
-        st.markdown(f"<div class='mobile-screen' style='font-size: 24px;'>{txt} </div>", unsafe_allow_html=True)
-
-        # Store the value of emo in the session state
-        st.session_state.emo = emo
 
     if st.session_state.stage > 0:
         if st.button(button_label,on_click=set_stage, args=(2,)):
