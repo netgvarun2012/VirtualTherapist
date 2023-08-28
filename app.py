@@ -56,13 +56,13 @@ label_mapping = ['angry', 'calm', 'disgust', 'fearful', 'happy', 'sad', 'surpris
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Create the path to the file in the parent directory
-parent_dir = os.path.abspath(os.path.join(current_dir, "../EmotionDetector/Models/"))
+parent_dir = os.path.abspath(os.path.join(current_dir, "/EmotionDetector/Models/"))
 #file_path = os.path.join(parent_dir, "MultiModal/MultiModal_model_state_dict.pth")
 
 # Define your model name from the Hugging Face model hub
 model_weights_path = "https://huggingface.co/netgvarun2005/MultiModalBertHubert/resolve/main/MultiModal_model_state_dict.pth"
 # GenAI model
-parent_dir2 = os.path.abspath(os.path.join(current_dir, "../GenAI/"))
+parent_dir2 = os.path.abspath(os.path.join(current_dir, "/GenAI/"))
 
 
 # Emo Detector
