@@ -54,7 +54,7 @@ label_mapping = ['angry', 'calm', 'disgust', 'fearful', 'happy', 'sad', 'surpris
 
 # Get the path of the current directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
-
+print(f'current_dir is {current_dir}\n')
 # Create the path to the file in the parent directory
 tokenizer1_dir = os.path.abspath(os.path.join(current_dir, "/EmotionDetector/Models/Tokenizer/"))
 
