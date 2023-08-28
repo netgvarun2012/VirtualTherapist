@@ -29,6 +29,7 @@ from transformers import (
 )
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import webbrowser
+from streamlit.components.v1 import html
 
 emo2promptMapping = {
 'Angry':'ANGRY', 
@@ -60,6 +61,15 @@ model_weights_path = "https://huggingface.co/netgvarun2005/MultiModalBertHubert/
 model_id = "facebook/hubert-base-ls960"
 bert_model_name = "bert-base-uncased"
 
+
+def open_page(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank').focus();
+        </script>
+    """ % (url)
+    html(open_script)
+
 def config():
     # Loading Image using PIL
     im = Image.open('./icon.png')
@@ -75,7 +85,9 @@ def config():
     #     # ''', unsafe_allow_html=True)   
     #     st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
        
-    st.sidebar.button('[**Open External Audio Recorder**](https://voice-recorder-online.com/)')
+   # st.sidebar.button('[**Open External Audio Recorder**]()')
+    st.sidebar.button('Open link', on_click=open_page("https://voice-recorder-online.com/"))
+
 
     # Add custom CSS styles
     st.markdown("""
@@ -137,7 +149,6 @@ class MultimodalModel(nn.Module):
         concat_output = torch.cat((hubert_output, bert_output), dim=-1)
         logits = self.classifier(concat_output)
         return logits
-
 
 def speechtoText(wavfile):
     return speech_model.transcribe(wavfile)['text']
