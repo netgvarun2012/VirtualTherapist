@@ -82,7 +82,7 @@ def config():
         </style>
     """, unsafe_allow_html=True)
     # Render mobile screen container and its content
-    st.sidebar.title("Sound Recorder")
+    #st.sidebar.title("Sound Recorder")
 
     # Define a custom style for your title
     title_style = """
