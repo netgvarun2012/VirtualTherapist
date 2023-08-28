@@ -86,8 +86,6 @@ def config():
     #     st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
        
    # st.sidebar.button('[**Open External Audio Recorder**]()')
-    st.sidebar.button('Open link', on_click=open_page("https://voice-recorder-online.com/"))
-
 
     # Add custom CSS styles
     st.markdown("""
@@ -411,5 +409,8 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 
 if __name__ == '__main__':
     config()
+    if st.sidebar.button("**Open External Audio Recorder!**"):
+        open_page("https://voice-recorder-online.com/")
+
     ser_model,tokenizer,gpt_model,gpt_tokenizer = load_model()
     process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer)
