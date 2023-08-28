@@ -67,14 +67,15 @@ def config():
     # Set the page configuration with the title and icon
     st.set_page_config(page_title="Virtual Therapist", page_icon=im)
 
-    if st.sidebar.markdown("**Open External Audio Recorder**"):
-        # url = 'https://voice-recorder-online.com/'
-        # # webbrowser.open_new_tab(url)
-        # st.markdown(f'''
-        # <a href={url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
-        # ''', unsafe_allow_html=True)   
-        st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
+    # if st.sidebar.markdown("**Open External Audio Recorder**"):
+    #     # url = 'https://voice-recorder-online.com/'
+    #     # # webbrowser.open_new_tab(url)
+    #     # st.markdown(f'''
+    #     # <a href={url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
+    #     # ''', unsafe_allow_html=True)   
+    #     st.markdown("<a href='https://voice-recorder-online.com/' target='_blank'>Redirecting to the external audio recorder</a>.", unsafe_allow_html=True)
        
+    st.sidebar.button('[**Open External Audio Recorder**](https://voice-recorder-online.com/)')
 
     # Add custom CSS styles
     st.markdown("""
