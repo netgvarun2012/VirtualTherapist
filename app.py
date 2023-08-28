@@ -287,68 +287,86 @@ def GenerateText(emo,gpt_tokenizer,gpt_model):
 def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
     emo = ""
     button_label = "Show Helpful Tips"
-    recorded = False  # Initialize the recording state as False
+#     recorded = False  # Initialize the recording state as False
 
-    if 'stage' not in st.session_state:
-        st.session_state.stage = 0
+#     if 'stage' not in st.session_state:
+#         st.session_state.stage = 0
 
     def set_stage(stage):
         st.session_state.stage = stage
 
-   # Add custom CSS styles
-    st.markdown("""
-        <style>
-            .stRecordButton {
-                width: 50px;
-                height: 50px;
-                border-radius: 50px;
-                background-color: red;
-                color: black; /* Text color */
-                font-size: 16px;
-                font-weight: bold;
-                border: 2px solid white; /* Solid border */
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-                transition: background-color 0.2s;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+#    # Add custom CSS styles
+#     st.markdown("""
+#         <style>
+#             .stRecordButton {
+#                 width: 50px;
+#                 height: 50px;
+#                 border-radius: 50px;
+#                 background-color: red;
+#                 color: black; /* Text color */
+#                 font-size: 16px;
+#                 font-weight: bold;
+#                 border: 2px solid white; /* Solid border */
+#                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+#                 cursor: pointer;
+#                 transition: background-color 0.2s;
+#                 display: flex;
+#                 justify-content: center;
+#                 align-items: center;
+#             }
 
-            .stRecordButton:hover {
-                background-color: darkred; /* Change background color on hover */
-            }
-        </style>
-    """, unsafe_allow_html=True)
+#             .stRecordButton:hover {
+#                 background-color: darkred; /* Change background color on hover */
+#             }
+#         </style>
+#     """, unsafe_allow_html=True)
 
-    if st.sidebar.button("Record a 4 sec audio!", key="record_button", help="Click to start recording", on_click=set_stage, args=(1,)):
-    # Your button click action here
+#     if st.sidebar.button("Record a 4 sec audio!", key="record_button", help="Click to start recording", on_click=set_stage, args=(1,)):
+#     # Your button click action here
 
-        # Apply bold styling to the button label
-        st.sidebar.markdown("<span style='font-weight: bolder;'>Record a 4 sec audio!</span>", unsafe_allow_html=True)
+#         # Apply bold styling to the button label
+#         st.sidebar.markdown("<span style='font-weight: bolder;'>Record a 4 sec audio!</span>", unsafe_allow_html=True)
 
-        # recorded = True  # Set the recording state to True after recording
+#         # recorded = True  # Set the recording state to True after recording
 
-        # Add your audio recording code here
-        output_wav_file = "output.wav"
+#         # Add your audio recording code here
+#         output_wav_file = "output.wav"
 
-        try:
-            record_audio(output_wav_file, duration=4)
+#         try:
+#             record_audio(output_wav_file, duration=4)
         
-            # # Use a div to encapsulate the audio element and apply the border
-            with st.sidebar.markdown('<div class="audio-container">', unsafe_allow_html=True):
-                # Play recorded sound
-                st.audio(output_wav_file, format="wav")    
+#             # # Use a div to encapsulate the audio element and apply the border
+#             with st.sidebar.markdown('<div class="audio-container">', unsafe_allow_html=True):
+#                 # Play recorded sound
+#                 st.audio(output_wav_file, format="wav")    
+    uploaded_file = st.file_uploader("Upload your file! It should be .wav", type=["wav"])
 
-            audio_array, sr = librosa.load(preprocessWavFile(output_wav_file), sr=None)
-            st.sidebar.markdown("<p style='font-size: 14px; font-weight: bold;'>Generating transcriptions! Please wait...</p>", unsafe_allow_html=True)
+    if uploaded_file is not None:
+        # Read the content of the uploaded file
+        audio_content = uploaded_file.read()
+        # Display audio file
+        st.audio(audio_content, format="audio/wav")
 
-            transcription = speechtoText(output_wav_file)
-            
-            emo = predict(audio_array,ser_model,2,tokenizer,transcription)
-            
-            # Display the transcription in a textbox
-            st.sidebar.text_area("Transcription", transcription, height=25)        
+        # Save the audio content to a temporary file
+        with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as temp_file:
+            temp_filename = temp_file.name
+            #print(f'temp_filename is {temp_filename}\n')
+            temp_file.write(audio_content)
+
+            try:
+
+                audio_array, sr = librosa.load(preprocessWavFile(temp_filename), sr=None)
+                st.sidebar.markdown("<p style='font-size: 14px; font-weight: bold;'>Generating transcriptions! Please wait...</p>", unsafe_allow_html=True)
+
+                transcription = speechtoText(temp_filename)
+                
+                emo = predict(audio_array,ser_model,2,tokenizer,transcription)
+                
+                # Display the transcription in a textbox
+                st.sidebar.text_area("Transcription", transcription, height=25)      
+            except:
+                st.write("Inference impossible, a problem occurred with your audio or your parameters, we apologize :(")
+  
 
             txt = f"You seem to be <b>{(emo2promptMapping[emo]).capitalize()}!</b>\n Click on 'Show Helpful Tips' button to proceed further."
             st.markdown(f"<div class='mobile-screen' style='font-size: 24px;'>{txt} </div>", unsafe_allow_html=True)
@@ -356,11 +374,11 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
             # Store the value of emo in the session state
             st.session_state.emo = emo
 
-        except OSError as e:
-            if "[Errno -9996]" in str(e) and "Invalid input device (no default output device)" in str(e):
-                st.error("Recording not possible as no input device on cloud platforms. Please upload instead.")
-            else:
-                st.error(f"An error occurred while recording: {str(e)}")
+        # except OSError as e:
+        #     if "[Errno -9996]" in str(e) and "Invalid input device (no default output device)" in str(e):
+        #         st.error("Recording not possible as no input device on cloud platforms. Please upload instead.")
+        #     else:
+        #         st.error(f"An error occurred while recording: {str(e)}")
 
     if st.session_state.stage > 0:
         if st.button(button_label,on_click=set_stage, args=(2,)):
