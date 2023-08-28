@@ -52,14 +52,8 @@ speech_model = whisper.load_model("base")
 num_labels=7
 label_mapping = ['angry', 'calm', 'disgust', 'fearful', 'happy', 'sad', 'surprised']
 
-# Create the path to the file in the parent directory
-tokenizer1_dir = "./EmotionDetector/Models/Tokenizer/"
-
 # Define your model name from the Hugging Face model hub
 model_weights_path = "https://huggingface.co/netgvarun2005/MultiModalBertHubert/resolve/main/MultiModal_model_state_dict.pth"
-# GenAI model
-tokenizer2_dir = "./GenAI/Tokenizer/"
-
 
 # Emo Detector
 model_id = "facebook/hubert-base-ls960"
@@ -198,10 +192,10 @@ def load_model():
     multiModel.load_state_dict(torch.hub.load_state_dict_from_url(model_weights_path, map_location=device), strict=False)
 
    # multiModel.load_state_dict(torch.load(file_path + "/MultiModal_model_state_dict.pth",map_location=device),strict=False)
-    tokenizer = AutoTokenizer.from_pretrained(tokenizer1_dir) 
+    tokenizer = AutoTokenizer.from_pretrained("netgvarun2005/MultiModalBertHubertTokenizer") 
 
     # GenAI
-    tokenizer_gpt = AutoTokenizer.from_pretrained(tokenizer2_dir, pad_token='<|pad|>',bos_token='<|startoftext|>',eos_token='<|endoftext|>')
+    tokenizer_gpt = AutoTokenizer.from_pretrained("netgvarun2005/GPTVirtualTherapistTokenizer", pad_token='<|pad|>',bos_token='<|startoftext|>',eos_token='<|endoftext|>')
     model_gpt = AutoModelForCausalLM.from_pretrained("netgvarun2005/GPTVirtualTherapist")
    
     return multiModel,tokenizer,model_gpt,tokenizer_gpt
