@@ -28,7 +28,8 @@ from transformers import (
     HubertForSequenceClassification
 )
 from transformers import AutoTokenizer, AutoModelForCausalLM
-  
+import webbrowser
+
 emo2promptMapping = {
 'Angry':'ANGRY', 
 'Calm':'CALM',
