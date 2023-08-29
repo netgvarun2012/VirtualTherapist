@@ -297,7 +297,7 @@ def GenerateText(emo,gpt_tokenizer,gpt_model):
     generated = gpt_tokenizer(prompt, return_tensors="pt").input_ids
 
     sample_outputs = gpt_model.generate(generated, do_sample=True, top_k=50,
-                                    max_length=20, top_p=0.95, temperature=0.2, num_return_sequences=10,no_repeat_ngram_size=1)
+                                    max_length=30, top_p=0.95, temperature=1.9, num_return_sequences=10)#,no_repeat_ngram_size=1)
 
     # Extract and split the generated text into words
     outputs = set([gpt_tokenizer.decode(sample_output, skip_special_tokens=True).split(':')[-1] for sample_output in sample_outputs])        
