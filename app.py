@@ -203,7 +203,7 @@ def preprocessWavFile(wavfile):
     denoised_file = noiseReduction(resampledwavfile)
     return removeSilence(denoised_file)
 
-@st.cache_resourse()
+@st.cache_resource()
 def load_model():
     # Load the model
     multiModel = MultimodalModel(bert_model_name, num_labels)
