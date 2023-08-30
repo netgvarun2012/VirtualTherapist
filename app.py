@@ -148,7 +148,7 @@ class MultimodalModel(nn.Module):
         logits = self.classifier(concat_output)
         return logits
 
-@st.cache(show_spinner=False)
+@st.cache_resource(show_spinner=False)
 def speechtoText(wavfile):
     return speech_model.transcribe(wavfile)['text']
 
