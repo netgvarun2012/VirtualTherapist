@@ -148,6 +148,7 @@ class MultimodalModel(nn.Module):
         logits = self.classifier(concat_output)
         return logits
 
+@st.cache(show_spinner=False)
 def speechtoText(wavfile):
     return speech_model.transcribe(wavfile)['text']
 
@@ -218,7 +219,7 @@ def load_model():
     #tokenizer_gpt = AutoTokenizer.from_pretrained("netgvarun2005/GPTVirtualTherapistTokenizer", pad_token='<|pad|>',bos_token='<|startoftext|>',eos_token='<|endoftext|>')
     tokenizer_gpt = AutoTokenizer.from_pretrained("netgvarun2005/GPTTherapistDeepSpeedTokenizer", pad_token='<|pad|>',bos_token='<|startoftext|>',eos_token='<|endoftext|>')
     #model_gpt = AutoModelForCausalLM.from_pretrained("netgvarun2005/GPTVirtualTherapist")
-    model_gpt = AutoModelForCausalLM.from_pretrained("netgvarun2005/GPTTherapistDeepSpeedModel").to(device)
+    model_gpt = AutoModelForCausalLM.from_pretrained("netgvarun2005/GPTTherapistDeepSpeedModel")
    
     return multiModel,tokenizer,model_gpt,tokenizer_gpt
 
@@ -295,6 +296,9 @@ def GenerateText(emo,gpt_tokenizer,gpt_model):
     prompt  = f'<startoftext>{emo2promptMapping[emo]}:' 
 
     generated = gpt_tokenizer(prompt, return_tensors="pt").input_ids
+
+    generated = generated.to(device)
+    gpt_model.to(device)
 
     sample_outputs = gpt_model.generate(generated, do_sample=True, top_k=50,
                                     max_length=30, top_p=0.95, temperature=1.1, num_return_sequences=10)#,no_repeat_ngram_size=1)
