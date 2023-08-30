@@ -417,7 +417,6 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
         # Save the audio content to a temporary file
         with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as temp_file:
             temp_filename = temp_file.name
-            #print(f'temp_filename is {temp_filename}\n')
             temp_file.write(audio_content)
 
             try:
