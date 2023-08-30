@@ -90,7 +90,7 @@ def config():
         None
     """
     # Loading Image using PIL
-    im = Image.open('./icon.png')
+    im = Image.open('./config/icon.png')
     
     # Set the page configuration with the title and icon
     st.set_page_config(page_title="Virtual Therapist", page_icon=im)
