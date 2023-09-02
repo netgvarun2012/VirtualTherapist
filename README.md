@@ -43,13 +43,13 @@ https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/ce71ea03-3fe1-
 
 # Setup and Requirements <a id="installation"></a>
 For a list of required linux (debian/ubuntu based) packages see the *packages.txt*
-or just install them all at once using pip.
+or just install them all at once as below:
 ```
 sudo apt-get install $(cat packages.txt)
 ```
 
 For a list of required python packages see the *requirements.txt*
-or just install them all at once using pip.
+or just install them all at once using pip:
 ```
 pip install -r requirements.txt
 ```
