@@ -102,7 +102,7 @@ def config():
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 200px; /* Adjust the height as needed */
+        height: 100px; /* Adjust the height as needed */
     }
     </style>
     """
