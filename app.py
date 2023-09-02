@@ -105,8 +105,8 @@ def config():
         flex-direction: column;
         align-items: center;
         justify-content: center; /* Align content in the middle */
-        height: 10vh; /* Reduce the height of the box */
-        padding: 10px; /* Reduce padding */
+        height: 20vh; /* Reduce the height of the box */
+        padding: 20px; /* Reduce padding */
         border-radius: 10px;
     }
     </style>
