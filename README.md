@@ -84,7 +84,7 @@ pip install -r requirements.txt
   - All the models were deployed on Hugging Face's Model Hub, a platform known for its accessibility, scalability, and collaborative environment for sharing and accessing state-of-the-art models and solutions.
   - Finally, Hugging Face Spaces was used as the cloud hosting platform ,as it could host such big deep learning models in a very const effective manner.
   - Github repo was utilized for sharing files between local and huggingface repo.
-
+  - Check this [notebook](https://github.com/netgvarun2012/VirtualTherapist/blob/main/notebooks/Audio%20Processing%20and%20Modelling.ipynb) for more details.
 
 # Highlights <a id="highlights"></a>:
 - This project demonstrates my past experience in working with Generative AI in realms of *'Finetuning'*, *'prompt engineering'* and *'deployment'*.
