@@ -438,6 +438,7 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 
             # Store the value of emo in the session state
             st.session_state.emo = emo
+
             if col1.button(button_label1):
                 #with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
                 with st.spinner("Generating transcriptions in the side pane.Please wait..."):
