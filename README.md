@@ -57,7 +57,7 @@ pip install -r requirements.txt
 # Application Features <a id="features"></a>:
 - Using the web-app, a user can upload an audio snippet or record an audio snippet (extenal website link provided).
 - User can playback the recorded/uploaded audio.
-- AI in the background upon rececing the audio input generates english transcriptions in real-time.
+- AI in the background upon receiving the audio input generates english transcriptions in real-time.
 - MultiModal AI system then uses both the Speech input and the Text input to predict emotion of the user out of 7 pre-defined classes of **"Anger", "Sad", "Disgusted", "Happy", "Calm", "Surprised" and "Fearful"**.
 - After deciphering the emotion, Generative AI component of the system takes the predicted emotion labels as prompt and generates helpful tips accordingly.
 - There is an added feature of choosing between "Balanced" and "Creative" one liner recommendations.
