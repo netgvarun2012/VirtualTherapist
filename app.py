@@ -104,8 +104,8 @@ def config():
             flex-direction: column;
             align-items: center;
             justify-content: flex-start; /* Align content to the top */
-            height: 20vh;
-            padding: 20px;
+            height: 10vh;
+            padding: 40px;
             border-radius: 10px;
         }
         </style>
@@ -441,7 +441,7 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 
             if col1.button(button_label1):
                 #with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
-                with st.spinner("Generating transcriptions in the side pane.Please wait..."):
+                with st.spinner("Generating transcriptions in the side pane. Please wait..."):
                     # Retrieve prompt from the emotion
                     emo = st.session_state.emo
                     # Call the function for GENAI
@@ -452,7 +452,8 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 
 
             if col2.button(button_label2):
-                with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
+                #with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
+                with st.spinner("Generating tips (it may take upto 2-3 mins). Please wait..."):
                     # Retrieve prompt from the emotion
                     emo = st.session_state.emo
                     temp=0.2
