@@ -104,7 +104,7 @@ def config():
             flex-direction: column;
             align-items: center;
             justify-content: flex-start; /* Align content to the top */
-            height: 10vh;
+            height: 20vh;
             padding: 40px;
             border-radius: 10px;
         }
