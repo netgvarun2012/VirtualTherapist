@@ -62,7 +62,7 @@ pip install -r requirements.txt
 - After deciphering the emotion, Generative AI component of the system takes the predicted emotion labels as prompt and generates helpful tips accordingly.
 - There is an added feature of choosing between "Balanced" and "Creative" one liner recommendations.
 
-# Methodology <a id:"method"></a>:
+# Methodology <a id="method"></a>:
 
 - In terms of GEN-AI component, following was achieved:
   - A dataset was created manually by requesting CHATGPT to generate one-liner tips based on 7 different emotion categories.
