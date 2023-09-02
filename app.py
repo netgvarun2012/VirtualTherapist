@@ -421,7 +421,7 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
             try:
                 audio_array, sr = librosa.load(preprocessWavFile(temp_filename), sr=None)
                 #with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating transcriptions in the side pane! Please wait...</p>", unsafe_allow_html=True)):
-                    with st.spinner("Generating transcriptions in the side pane.Please wait..."):
+                with st.spinner("Generating transcriptions in the side pane.Please wait..."):
                     transcription = speechtoText(temp_filename)
                     emo = predict(audio_array,ser_model,2,tokenizer,transcription)
                     # Display the transcription in a textbox
