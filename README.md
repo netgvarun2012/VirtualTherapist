@@ -18,6 +18,10 @@ Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapis
 This repository details the technical and functional aspects of *'Virtual Therapist'* app - an Intelligent speech and text input based assistant that can decipher emotions and generate **therapeutic messages** based on the Emotional state of the user.
 
 
+
+https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/e0a0cfdf-749b-4aa7-959f-1e008c321c4a
+
+
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/039b94e1-d9b9-41dd-930c-d326053b2ba9
 
 
