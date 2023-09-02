@@ -27,7 +27,9 @@ Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapis
 # Introduction <a id="introduction"></a>
 
 This repository details the technical and functional aspects of *'Virtual Therapist'* app - an Intelligent speech and text input based assistant that can decipher emotions and generate **therapeutic messages** based on the Emotional state of the user.
+
 Emotions recognized - *Angry*,*Sad*,*Fearful*,*Happy*,*Disgusted*,*Surprised*,*Calm* with ~80% accuracy.
+
 Generative AI finetuning of GPTNeo 1.3B parameter model - perplexity obtained 1.502 corresponding to the training loss of '0.407200'.
 
 
