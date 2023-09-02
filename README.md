@@ -14,8 +14,24 @@ license: mit
 
 Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapist
 
-This repository details the technical and functional aspects of *'Virtual Therapist'* app - an Intelligent speech and text input based assistant that can decipher emotions and generate **therapeutic messages** based on the Emotional state of the user.
 
+# Table of Contents
+  * [Introduction](#introduction)
+  * [Demo Videos](#demos)
+  * [Setup and Requirements](#installation)
+  * [Working Pipeline](#pipeline)
+  * [Tutorials](#tutorials)
+  * [Dataset](#dataset)
+  * [Usage](#usage)
+
+# Introduction <a id="introduction"></a>
+
+This repository details the technical and functional aspects of *'Virtual Therapist'* app - an Intelligent speech and text input based assistant that can decipher emotions and generate **therapeutic messages** based on the Emotional state of the user.
+Emotions recognized - *Angry*,*Sad*,*Fearful*,*Happy*,*Disgusted*,*Surprised*,*Calm* with ~80% accuracy.
+Generative AI finetuning of GPTNeo 1.3B parameter model - perplexity obtained 1.502 corresponding to the training loss of '0.407200'.
+
+
+# Reocrded Demos <a id="demos"></a>
 
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/f5cfe70a-ae62-43dd-a8c2-752d5c47dad5
 
@@ -23,19 +39,18 @@ https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/b52c4244-0b8c-
 
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/ce71ea03-3fe1-46eb-a7d2-36676860fc6c
 
-
-
-
-
-# Table of Contents
-  * [Setup and Requirements](#installation)
-  * [Working Pipeline](#pipeline)
-  * [Tutorials](#tutorials)
-  * [Dataset](#dataset)
-  * [Usage](#usage)
-
-
 # Setup and Requirements <a id="installation"></a>
+For a list of required linux packages see the *packages.txt*
+or just install them all at once using pip.
+```
+sudo apt install packages.txt
+```
+
+For a list of required python packages see the *requirements.txt*
+or just install them all at once using pip.
+```
+pip install -r requirements.txt
+```
 
 ### Application Features:
 - Using the web-app, a user can upload an audio snippet or record an audio snippet (extenal website link provided).
