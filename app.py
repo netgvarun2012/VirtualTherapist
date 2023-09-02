@@ -348,7 +348,7 @@ def predict(audio_array,multiModal_model,key,tokenizer,text):
 
     return (label_mapping[maxVal]).capitalize()
 
-def GenerateText(emo,gpt_tokenizer,gpt_model,t_val):
+def GenerateText(emo,gpt_tokenizer,gpt_model,t_val,t_k,t_p):
     """
     Generate text based on a given emotion using a GPT-2 model.
 
@@ -374,8 +374,8 @@ def GenerateText(emo,gpt_tokenizer,gpt_model,t_val):
     gpt_model.to(device)
 
     # Generate multiple text samples based on the prompt
-    sample_outputs = gpt_model.generate(generated, do_sample=True, top_k=50,
-                                    max_length=30, top_p=0.95, temperature=t_val, num_return_sequences=10)#,no_repeat_ngram_size=1)
+    sample_outputs = gpt_model.generate(generated, do_sample=True, top_k=t_k,
+                                    max_length=30, top_p=t_p, temperature=t_val, num_return_sequences=10)#,no_repeat_ngram_size=1)
 
     # Extract and split the generated text into words
     outputs = set([gpt_tokenizer.decode(sample_output, skip_special_tokens=True).split(':')[-1] for sample_output in sample_outputs])        
@@ -435,19 +435,25 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
             # Store the value of emo in the session state
             st.session_state.emo = emo
             if st.button(button_label1):
-                with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 3-4 mins depending upon the Network speed). Please wait...</p>", unsafe_allow_html=True)):
+                with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
                     # Retrieve prompt from the emotion
                     emo = st.session_state.emo
                     # Call the function for GENAI
-                    GenerateText(emo,gpt_tokenizer,gpt_model,1.1)
+                    temp=0.9
+                    top_k=50
+                    top_p=0.8
+                    GenerateText(emo,gpt_tokenizer,gpt_model,temp,top_k,top_p)
 
 
             if st.button(button_label2):
-                with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 3-4 mins depending upon the Network speed). Please wait...</p>", unsafe_allow_html=True)):
+                with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
                     # Retrieve prompt from the emotion
                     emo = st.session_state.emo
+                    temp=0.2
+                    top_k=90
+                    top_p=0.95
                     # Call the function for GENAI
-                    GenerateText(emo,gpt_tokenizer,gpt_model,0.3)
+                    GenerateText(emo,gpt_tokenizer,gpt_model,temp,top_k,top_p)
 
 def main():
     """
