@@ -102,7 +102,7 @@ def config():
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 300px; /* Adjust the height as needed */
+        height: 200px; /* Adjust the height as needed */
     }
     </style>
     """
@@ -111,7 +111,7 @@ def config():
 
     # Add the centered image
     st.markdown("<div class='centered-image'>", unsafe_allow_html=True)
-    st.image("config/microphone.jpeg", caption="Centered Image")
+    st.image("config/microphone.jpeg")
     st.markdown("</div>", unsafe_allow_html=True)
 
     # Add custom CSS styles
