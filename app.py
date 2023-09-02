@@ -433,9 +433,12 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
             txt = f"You seem to be <b>{(emo2promptMapping[emo]).capitalize()}!</b>\n Click on 'Show Helpful Tips' button to proceed further."
             st.markdown(f"<div class='mobile-screen' style='font-size: 24px;'>{txt} </div>", unsafe_allow_html=True)
 
+            # Create two columns for the buttons
+            col1, col2 = st.beta_columns(2)
+
             # Store the value of emo in the session state
             st.session_state.emo = emo
-            if st.button(button_label1):
+            if col1.button(button_label1):
                 #with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
                 with st.spinner("Generating transcriptions in the side pane! Please wait..."):
                     # Retrieve prompt from the emotion
@@ -447,7 +450,7 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
                     GenerateText(emo,gpt_tokenizer,gpt_model,temp,top_k,top_p)
 
 
-            if st.button(button_label2):
+            if col2.button(button_label2):
                 with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
                     # Retrieve prompt from the emotion
                     emo = st.session_state.emo
