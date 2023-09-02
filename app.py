@@ -111,7 +111,7 @@ def config():
 
     # Add the centered image
     st.markdown("<div class='centered-image'>", unsafe_allow_html=True)
-    st.image("config/microphone.jpeg")
+    st.image("config/microphone.jpeg",width=100)
     st.markdown("</div>", unsafe_allow_html=True)
 
     # Add custom CSS styles
