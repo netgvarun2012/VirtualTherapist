@@ -99,7 +99,7 @@ def config():
     st.markdown("""
         <style>
         .mobile-screen {
-            border: 2px solid black;            
+            border: 3px solid black;            
             display: flex;
             flex-direction: column;
             align-items: center;
