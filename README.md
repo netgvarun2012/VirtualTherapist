@@ -20,8 +20,8 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 - User can playback the audio.
 - AI in the background upon rececing the audio input generates english transcriptions in real-time.
 - MultiModal AI system then uses both the Speech input and the Text input to predict emotion of the user out of 7 pre-defined classes of "Anger", "Sad", "Disgusted", "Happy", "Calm", "Surprised" and "Fearful".
-- After deciphering the emotion, Generative AI component of the system takes the predicted emotion labels as prompt and generated helpful tips accordingly.
-- There is an added feature of requesting "Balanced" vs "Creative" one liner recommendations.
+- After deciphering the emotion, Generative AI component of the system takes the predicted emotion labels as prompt and generates helpful tips accordingly.
+- There is an added feature of choosing between "Balanced" and "Creative" one liner recommendations.
 
 ### Methodology:
 
