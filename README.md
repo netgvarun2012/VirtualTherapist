@@ -33,7 +33,7 @@ Emotions recognized - *Angry*,*Sad*,*Fearful*,*Happy*,*Disgusted*,*Surprised*,*C
 Generative AI finetuning of GPTNeo 1.3B parameter model - perplexity obtained '1.502' corresponding to the training loss of '0.407200'.
 
 
-# Reocrded Demos <a id="demos"></a>
+# Recorded Demos <a id="demos"></a>
 
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/f5cfe70a-ae62-43dd-a8c2-752d5c47dad5
 
