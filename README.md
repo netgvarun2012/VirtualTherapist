@@ -1,4 +1,3 @@
-
 ---
 title: VirtualTherapist
 emoji: ⚡
@@ -10,6 +9,7 @@ app_file: app.py
 pinned: false
 license: mit
 ---
+
 
 # VIRTUAL THERAPIST - INTELLIGENT EMOTION RECOGNIZER AND THERAPEUTIC MESSAGES GENERATOR.
 
