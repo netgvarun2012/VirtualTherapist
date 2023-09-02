@@ -95,6 +95,8 @@ def config():
     # Set the page configuration with the title and icon
     st.set_page_config(page_title="Virtual Therapist", page_icon=im)
 
+    st.image("microphone.jpeg", use_column_width=True)
+
     # Add custom CSS styles
     st.markdown("""
         <style>
