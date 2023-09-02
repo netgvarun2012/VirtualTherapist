@@ -19,10 +19,10 @@ Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapis
   * [Introduction](#introduction)
   * [Demo Videos](#demos)
   * [Setup and Requirements](#installation)
-  * [Working Pipeline](#pipeline)
-  * [Tutorials](#tutorials)
-  * [Dataset](#dataset)
-  * [Usage](#usage)
+  * [Features](#features)
+  * [Methodology](#method)
+  * [Deployment considerations](#deplou)
+  * [Highlights](#highlights)
 
 # Introduction <a id="introduction"></a>
 
@@ -42,10 +42,10 @@ https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/b52c4244-0b8c-
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/ce71ea03-3fe1-46eb-a7d2-36676860fc6c
 
 # Setup and Requirements <a id="installation"></a>
-For a list of required linux packages see the *packages.txt*
+For a list of required linux (debian/ubuntu based) packages see the *packages.txt*
 or just install them all at once using pip.
 ```
-sudo apt install packages.txt
+sudo apt-get install $(cat packages.txt)
 ```
 
 For a list of required python packages see the *requirements.txt*
@@ -54,7 +54,7 @@ or just install them all at once using pip.
 pip install -r requirements.txt
 ```
 
-### Application Features:
+### Application Features <a id="features"></a>:
 - Using the web-app, a user can upload an audio snippet or record an audio snippet (extenal website link provided).
 - User can playback the recorded/uploaded audio.
 - AI in the background upon rececing the audio input generates english transcriptions in real-time.
@@ -62,7 +62,7 @@ pip install -r requirements.txt
 - After deciphering the emotion, Generative AI component of the system takes the predicted emotion labels as prompt and generates helpful tips accordingly.
 - There is an added feature of choosing between "Balanced" and "Creative" one liner recommendations.
 
-### Methodology:
+### Methodology <a id:"method"></a>:
 
 - In terms of GEN-AI component, following was achieved:
   - A dataset was created manually by requesting CHATGPT to generate one-liner tips based on 7 different emotion categories.
@@ -79,14 +79,14 @@ pip install -r requirements.txt
   - Finally, a MultiModal architecture was created and finetuned jointly by concatenating Hubert and BERT embeddings.
   - More information on the whole process can be found [here](https://github.com/netgvarun2012/VirtualTherapist/blob/main/documentation/Speech_and_Text_based_MultiModal_Emotion_Recognizer.pdf).
 
-### Deployment:
+### Deployment <a id="deploy"></a>:
   - Lightweight Streamlit app as a front-end was chosen due to its simplicity and rapid development capabilities, allowing for quick prototyping and user-friendly interaction with complex data and models.
   - All the models were deployed on Hugging Face's Model Hub, a platform known for its accessibility, scalability, and collaborative environment for sharing and accessing state-of-the-art models and solutions.
   - Finally, Hugging Face Spaces was used as the cloud hosting platform ,as it could host such big deep learning models in a very const effective manner.
   - Github repo was utilized for sharing files between local and huggingface repo.
 
 
-## Highlights:
+## Highlights <a id="highlights"></a>:
 - This project demonstrates my past experience in working with Generative AI in realms of *'Finetuning'*, *'prompt engineering'* and *'deployment'*.
 - I have developed industry ready apps like **'Predictive Writing'** (Please refer to my [Medium Blog](https://medium.com/@sharmavarun.cs/predictive-writing-using-gpt-transformer-a042d37f7fb3) on this).
 - I have also worked extensively on exploring the customization of the core generative AI transformers libraries and other capabilities - for e.g.  integrated [GeDi](https://blog.salesforceairesearch.com/gedi/) model with GPT-neo model for coherence song lyrics generation while working for NUS computing and submitted a paper in ACMMM 23 conference.
