@@ -434,7 +434,7 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
             st.markdown(f"<div class='mobile-screen' style='font-size: 24px;'>{txt} </div>", unsafe_allow_html=True)
 
             # Create two columns for the buttons
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns([1,1])
 
             # Store the value of emo in the session state
             st.session_state.emo = emo
