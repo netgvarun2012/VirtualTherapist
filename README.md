@@ -1,5 +1,3 @@
-# VIRTUAL THERAPIST - INTELLIGENT EMOTION RECOGNIZER AND THERAPEUTIC MESSAGES GENERATOR.
-
 
 ---
 title: VirtualTherapist
@@ -12,6 +10,10 @@ app_file: app.py
 pinned: false
 license: mit
 ---
+
+# VIRTUAL THERAPIST - INTELLIGENT EMOTION RECOGNIZER AND THERAPEUTIC MESSAGES GENERATOR.
+
+
 
 Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapist
 
