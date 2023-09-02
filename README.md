@@ -11,20 +11,15 @@ license: mit
 ---
 
 # VIRTUAL THERAPIST - INTELLIGENT EMOTION RECOGNIZER AND THERAPEUTIC MESSAGES GENERATOR.
-This repository details the technical and functional aspects of *'Virtual Therapist'* app - an Intelligent speech and text input based assistant that can decipher emotions and generate **therapeutic messages** based on the Emotional state of the user.
-
 
 Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapist
 
-
-https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/91285ceb-5e63-4c11-8396-4e4512c8b3e6
-
-
-https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/1268b679-8e5d-436b-8ae7-27f095848ba5
+This repository details the technical and functional aspects of *'Virtual Therapist'* app - an Intelligent speech and text input based assistant that can decipher emotions and generate **therapeutic messages** based on the Emotional state of the user.
 
 
+https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/f5cfe70a-ae62-43dd-a8c2-752d5c47dad5
 
-
+https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/b52c4244-0b8c-4a88-9034-a940e4df8bd2
 
 
 
