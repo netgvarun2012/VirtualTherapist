@@ -16,8 +16,8 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 ## Repo for a "VirtualTherapist" project utilizing Generative AI, Speech and Text Emotion detection modes to suggest helpful tips based on the gauged emotion of the user.
 
 ### Application Features:
-- Using the web-app, a user can upload an audio snippet or record an audio snippet.
-- User can playback the audio.
+- Using the web-app, a user can upload an audio snippet or record an audio snippet (extenal website link provided).
+- User can playback the recorded/uploaded audio.
 - AI in the background upon rececing the audio input generates english transcriptions in real-time.
 - MultiModal AI system then uses both the Speech input and the Text input to predict emotion of the user out of 7 pre-defined classes of "Anger", "Sad", "Disgusted", "Happy", "Calm", "Surprised" and "Fearful".
 - After deciphering the emotion, Generative AI component of the system takes the predicted emotion labels as prompt and generates helpful tips accordingly.
