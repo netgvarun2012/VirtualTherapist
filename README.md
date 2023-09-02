@@ -28,8 +28,8 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 - In terms of GEN-AI component, following was achieved:
   - A dataset was created manually by requesting CHATGPT to generate one-liner tips based on 7 different emotion categories.
   - This dataset was augmented using [pegasus_paraphrase model](https://huggingface.co/tuner007/pegasus_paraphrase) to generate paraphrased instances.
-  - [GPT-Neo 1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B) model was fine-tuned using Emotion labels as prompts.
-  - [Deep Speed](https://github.com/microsoft/DeepSpeed) library was utilized to optimize and speed up training.
+  - [GPT-Neo 1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B) model was fine-tuned using Emotion labels as prompts and pytorch as backend.
+  - [Deep Speed](https://github.com/microsoft/DeepSpeed) library was utilized to optimize and speed up training of 1.3Billion parameters model.
     
 - In terms of Speech procesing and modelling , following was achieved:
   - 5 publicly available speech Emotion datasets were concatenated to create a robust dataset.
@@ -43,30 +43,21 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 ### Deployment:
   - Lightweight Streamlit app as a front-end was chosen due to its simplicity and rapid development capabilities, allowing for quick prototyping and user-friendly interaction with complex data and models.
   - All the models were deployed on Hugging Face's Model Hub, a platform known for its accessibility, scalability, and collaborative environment for sharing and accessing state-of-the-art models and solutions.
-  - Finally, Hugging Face Spaces was used as the cloud hosting platform , providing a convenient and collaborative environment for hosting, sharing, and showcasing the models, datasets, and applications in an accessible and user-friendly manner.
+  - Finally, Hugging Face Spaces was used as the cloud hosting platform ,as it could host such big deep learning models in a very const effective manner.
   - Github repo was utilized for sharing files between local and huggingface repo.
+
+
+## Highlights:
+- This project demonstrates my past experience in working with Generative AI in realms of 'Finetuning', 'prompt engineering' and deployment.
+- I have developed industry ready apps like 'Predictive Writing' (Please refer to my [Medium Blog](https://medium.com/@sharmavarun.cs/predictive-writing-using-gpt-transformer-a042d37f7fb3) on this).
+- I have also worked extensively on exploring the customization of the core generative AI transformers libraries and other capabilities - for e.g.  integrated [GeDi](https://blog.salesforceairesearch.com/gedi/) model with GPT-neo model for coherence song lyrics generation while working for NUS computing and submitted a paper in ACMMM 23 conference.
+- I have experience in using ChatGPT, Llama, Alpaca, T5 models for LLMs and other Natural language processing tasks.
+- I have exposure to working with latest advances in LLM spaces such as using DeepSpeed library, LORA (low-rank adaption),QLORA, PEFT libraries to optimize finetuning of LLMs.
+- This project also demonstrates my strong experience in working with Speech datasets and speech processing concepts.
+- Also, it demoonstrates my expertise in working with Deep learning, machine learning and other data science concepts.
+- I have used python scripts,streamlit, github,huggingface spaces to develop an EndtoEnd application demonstrating my deployment related skills as well.
+
+
+
     
-- The competition required the contestants to establish the stock timing model, spontaneously find the best trading opportunity to complete the trading and strive for the lowest overall trading cost of the stock.
-- The competition offered 500 stocks, each stock must complete buy and sell of 100 shares a day, and each trading of the number of shares can be distributed freely.
-- The trading time of each stock is from 9:30 to 11:30 and 13:00 to 15:00 daily.
-- Contestants needed to select several optimal time points for each stock to trade within the trading time. "Buy low, Sell high".
-
-After thorough literature review, We zeroed in on using Deep Re-inforcement learning method called PPO (Proximal Policy Optimizer).
-
-<img width="326" alt="image" src="https://user-images.githubusercontent.com/93938450/235061302-81cc709d-5d89-459b-984c-39715e910e28.png">
-
-As per the innovation, we brought to the competition, we introduced the following:
-- Custom Reward function.
-
-- Relevant State variables.
-
-- Short-selling.
-
-- Explainability of results.
-
-
-PPO algorithm by OPENAI uses a neural network to repesent the policy function (mapping between states and actios):
-
-<img width="327" alt="image" src="https://user-images.githubusercontent.com/93938450/235061516-7a55dd36-e961-48c5-a2fc-c58a61af21fd.png">
-
 
