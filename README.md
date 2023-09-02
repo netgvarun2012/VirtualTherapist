@@ -40,7 +40,7 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
   - Finally, a MultiModal architecture was created and finetuned jointly by concatenating Hubert and BERT embeddings.
   - More information on the whole process can be found [here](https://github.com/netgvarun2012/VirtualTherapist/blob/main/documentation/Speech_and_Text_based_MultiModal_Emotion_Recognizer.pdf).
 
-- Deployment:
+### Deployment:
   - Lightweight Streamlit app as a front-end was chosen due to its simplicity and rapid development capabilities, allowing for quick prototyping and user-friendly interaction with complex data and models.
   - All the models were deployed on Hugging Face's Model Hub, a platform known for its accessibility, scalability, and collaborative environment for sharing and accessing state-of-the-art models and solutions.
   - Finally, Hugging Face Spaces was used as the cloud hosting platform , providing a convenient and collaborative environment for hosting, sharing, and showcasing the models, datasets, and applications in an accessible and user-friendly manner.
