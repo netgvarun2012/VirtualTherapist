@@ -19,6 +19,10 @@ This repository details the technical and functional aspects of *'Virtual Therap
 
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/f5cfe70a-ae62-43dd-a8c2-752d5c47dad5
 
+
+https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/ce71ea03-3fe1-46eb-a7d2-36676860fc6c
+
+
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/b52c4244-0b8c-4a88-9034-a940e4df8bd2
 
 
