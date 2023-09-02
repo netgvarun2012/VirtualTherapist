@@ -1,3 +1,5 @@
+# VIRTUAL THERAPIST - INTELLIGENT EMOTION RECOGNIZER AND THERAPEUTIC MESSAGES GENERATOR!
+
 ---
 title: VirtualTherapist
 emoji: ⚡
@@ -23,8 +25,6 @@ This repository details the technical and functional aspects of *'Virtual Therap
 
 
 # Setup and Requirements <a id="installation"></a>
-
-## Repo for a "VirtualTherapist" project utilizing Generative AI, Speech and Text Emotion detection modes to suggest helpful tips based on the gauged emotion of the user.
 
 ### Application Features:
 - Using the web-app, a user can upload an audio snippet or record an audio snippet (extenal website link provided).
