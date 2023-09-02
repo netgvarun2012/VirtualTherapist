@@ -10,10 +10,9 @@ pinned: false
 license: mit
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapist
 
 This repository details the technical and functional aspects of *'Virtual Therapist'* app - an Intelligent speech and text input based assistant that can decipher emotions and generate **therapeutic messages** based on the Emotional state of the user.
-Web application can be accessed at : https://huggingface.co/spaces/netgvarun2005/VirtualTherapist
 
 # Table of Contents
   * [Setup and Requirements](#installation)
