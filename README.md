@@ -26,7 +26,7 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 ### Methodology:
 - In terms of GEN-AI component, following was achieved:
   - A dataset was created manually by requesting CHATGPT to generate one-liner tips based on 7 different emotion categories.
-  - This dataset was augmented using pegasus_paraphrase model <https://huggingface.co/tuner007/pegasus_paraphrase>
+  - This dataset was augmented using [pegasus_paraphrase model](https://huggingface.co/tuner007/pegasus_paraphrase)
 - The competition required the contestants to establish the stock timing model, spontaneously find the best trading opportunity to complete the trading and strive for the lowest overall trading cost of the stock.
 - The competition offered 500 stocks, each stock must complete buy and sell of 100 shares a day, and each trading of the number of shares can be distributed freely.
 - The trading time of each stock is from 9:30 to 11:30 and 13:00 to 15:00 daily.
