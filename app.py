@@ -420,7 +420,8 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
 
             try:
                 audio_array, sr = librosa.load(preprocessWavFile(temp_filename), sr=None)
-                with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating transcriptions in the side pane! Please wait...</p>", unsafe_allow_html=True)):
+                #with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating transcriptions in the side pane! Please wait...</p>", unsafe_allow_html=True)):
+                    with st.spinner("Generating transcriptions in the side pane! Please wait..."):
                     transcription = speechtoText(temp_filename)
                     emo = predict(audio_array,ser_model,2,tokenizer,transcription)
                     # Display the transcription in a textbox
@@ -435,7 +436,8 @@ def process_file(ser_model,tokenizer,gpt_model,gpt_tokenizer):
             # Store the value of emo in the session state
             st.session_state.emo = emo
             if st.button(button_label1):
-                with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
+                #with st.spinner(st.markdown("<p style='font-size: 16px; font-weight: bold;'>Generating tips (it may take upto 2-3 mins). Please wait...</p>", unsafe_allow_html=True)):
+                with st.spinner("Generating transcriptions in the side pane! Please wait..."):
                     # Retrieve prompt from the emotion
                     emo = st.session_state.emo
                     # Call the function for GENAI
