@@ -30,7 +30,7 @@ This repository details the technical and functional aspects of *'Virtual Therap
 
 Emotions recognized - *Angry*,*Sad*,*Fearful*,*Happy*,*Disgusted*,*Surprised*,*Calm* with ~80% accuracy.
 
-Generative AI finetuning of GPTNeo 1.3B parameter model - perplexity obtained 1.502 corresponding to the training loss of '0.407200'.
+Generative AI finetuning of GPTNeo 1.3B parameter model - perplexity obtained '1.502' corresponding to the training loss of '0.407200'.
 
 
 # Reocrded Demos <a id="demos"></a>
