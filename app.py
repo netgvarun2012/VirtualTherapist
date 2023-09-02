@@ -95,26 +95,6 @@ def config():
     # Set the page configuration with the title and icon
     st.set_page_config(page_title="Virtual Therapist", page_icon=im)
 
-    #st.markdown(
-    #"""
-    #<style>
-    #.centered-image {
-    #    display: flex;
-    #    justify-content: center;
-    #    align-items: center;
-    #    height: 100px; /* Adjust the height as needed */
-    #}
-    #</style>
-    #"""
-    #, unsafe_allow_html=True
-    #)
-
-    # Add the centered image
-    #st.markdown("<div class='centered-image'>", unsafe_allow_html=True)
-    #st.image("config/microphone.jpeg",width=200)
-    #st.markdown("</div>", unsafe_allow_html=True)
-    #st.image("config/microphone.jpeg", width=100, use_column_width=True)
-    st.image("config/microphone.jpeg", width=100, use_column_width=False, output_format="auto")
     # Add custom CSS styles
     st.markdown("""
         <style>
