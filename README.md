@@ -24,11 +24,13 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 - There is an added feature of requesting "Balanced" vs "Creative" one liner recommendations.
 
 ### Methodology:
+
 - In terms of GEN-AI component, following was achieved:
   - A dataset was created manually by requesting CHATGPT to generate one-liner tips based on 7 different emotion categories.
   - This dataset was augmented using [pegasus_paraphrase model](https://huggingface.co/tuner007/pegasus_paraphrase) to generate paraphrased instances.
   - [GPT-Neo 1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B) model was fine-tuned using Emotion labels as prompts.
   - [Deep Speed](https://github.com/microsoft/DeepSpeed) library was utilized to optimize and speed up training.
+    
 - In terms of Speech procesing and modelling , following was achieved:
   - 5 publicly available speech Emotion datasets were concatenated to create a robust dataset.
   - [Librosa](https://librosa.org/) library was used heavily to do preprocessing like 'Sample rate adjustment', 'Noise reduction', 'Silence removal' and 'Short audio removal' on raw audio files.
@@ -37,6 +39,12 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
   - [BERT](https://huggingface.co/docs/transformers/model_doc/bert) was trained on text transcrition embeddings.
   - Finally, a MultiModal architecture was created and finetuned jointly by concatenating Hubert and BERT embeddings.
   - More information on the whole process can be found [here](https://github.com/netgvarun2012/VirtualTherapist/blob/main/documentation/Speech_and_Text_based_MultiModal_Emotion_Recognizer.pdf).
+
+- Deployment:
+  - Lightweight Streamlit app as a front-end was chosen due to its simplicity and rapid development capabilities, allowing for quick prototyping and user-friendly interaction with complex data and models.
+  - All the models were deployed on Hugging Face's Model Hub, a platform known for its accessibility, scalability, and collaborative environment for sharing and accessing state-of-the-art models and solutions.
+  - Finally, Hugging Face Spaces was used as the cloud hosting platform , providing a convenient and collaborative environment for hosting, sharing, and showcasing the models, datasets, and applications in an accessible and user-friendly manner.
+  - Github repo was utilized for sharing files between local and huggingface repo.
     
 - The competition required the contestants to establish the stock timing model, spontaneously find the best trading opportunity to complete the trading and strive for the lowest overall trading cost of the stock.
 - The competition offered 500 stocks, each stock must complete buy and sell of 100 shares a day, and each trading of the number of shares can be distributed freely.
