@@ -12,6 +12,18 @@ license: mit
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
+This repository details the technical and functional aspects of *'Virtual Therapist'* app - an Intelligent speech and text input based assistant that can decipher emotions and generate **therapeutic messages** based on the Emotional state of the user.
+Web application can be accessed at : https://huggingface.co/spaces/netgvarun2005/VirtualTherapist
+
+# Table of Contents
+  * [Setup and Requirements](#installation)
+  * [Working Pipeline](#pipeline)
+  * [Tutorials](#tutorials)
+  * [Dataset](#dataset)
+  * [Usage](#usage)
+
+
+# Setup and Requirements <a id="installation"></a>
 
 ## Repo for a "VirtualTherapist" project utilizing Generative AI, Speech and Text Emotion detection modes to suggest helpful tips based on the gauged emotion of the user.
 
