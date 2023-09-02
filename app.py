@@ -113,7 +113,8 @@ def config():
     #st.markdown("<div class='centered-image'>", unsafe_allow_html=True)
     #st.image("config/microphone.jpeg",width=200)
     #st.markdown("</div>", unsafe_allow_html=True)
-    st.image("config/microphone.jpeg", width=100, use_column_width=True)
+    #st.image("config/microphone.jpeg", width=100, use_column_width=True)
+    st.image("config/microphone.jpeg", width=100, use_column_width=False, output_format="auto")
     # Add custom CSS styles
     st.markdown("""
         <style>
