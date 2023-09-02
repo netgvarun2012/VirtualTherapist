@@ -19,7 +19,7 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 - Using the web-app, a user can upload an audio snippet or record an audio snippet (extenal website link provided).
 - User can playback the recorded/uploaded audio.
 - AI in the background upon rececing the audio input generates english transcriptions in real-time.
-- MultiModal AI system then uses both the Speech input and the Text input to predict emotion of the user out of 7 pre-defined classes of "Anger", "Sad", "Disgusted", "Happy", "Calm", "Surprised" and "Fearful".
+- MultiModal AI system then uses both the Speech input and the Text input to predict emotion of the user out of 7 pre-defined classes of **"Anger", "Sad", "Disgusted", "Happy", "Calm", "Surprised" and "Fearful"**.
 - After deciphering the emotion, Generative AI component of the system takes the predicted emotion labels as prompt and generates helpful tips accordingly.
 - There is an added feature of choosing between "Balanced" and "Creative" one liner recommendations.
 
@@ -33,7 +33,7 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
     
 - In terms of Speech procesing and modelling , following was achieved:
   - 5 publicly available speech Emotion datasets were concatenated to create a robust dataset.
-  - [Librosa](https://librosa.org/) library was used heavily to do preprocessing like 'Sample rate adjustment', 'Noise reduction', 'Silence removal' and 'Short audio removal' on raw audio files.
+  - [Librosa](https://librosa.org/) library was used heavily to do preprocessing like **'Sample rate adjustment', 'Noise reduction', 'Silence removal' and 'Short audio removal'** on raw audio files.
   - [Whisper](https://github.com/openai/whisper) model was used to generate English language transcriptions of the preprocessed files.
   - [Hubeet](https://huggingface.co/docs/transformers/model_doc/hubert) model was fine-tuned with a classification head on preprocessed audio and emotion labels in supervised manner.
   - [BERT](https://huggingface.co/docs/transformers/model_doc/bert) was trained on text transcrition embeddings.
@@ -48,8 +48,8 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 
 
 ## Highlights:
-- This project demonstrates my past experience in working with Generative AI in realms of 'Finetuning', 'prompt engineering' and deployment.
-- I have developed industry ready apps like 'Predictive Writing' (Please refer to my [Medium Blog](https://medium.com/@sharmavarun.cs/predictive-writing-using-gpt-transformer-a042d37f7fb3) on this).
+- This project demonstrates my past experience in working with Generative AI in realms of *'Finetuning'*, *'prompt engineering'* and *'deployment'*.
+- I have developed industry ready apps like **'Predictive Writing'** (Please refer to my [Medium Blog](https://medium.com/@sharmavarun.cs/predictive-writing-using-gpt-transformer-a042d37f7fb3) on this).
 - I have also worked extensively on exploring the customization of the core generative AI transformers libraries and other capabilities - for e.g.  integrated [GeDi](https://blog.salesforceairesearch.com/gedi/) model with GPT-neo model for coherence song lyrics generation while working for NUS computing and submitted a paper in ACMMM 23 conference.
 - I have experience in using ChatGPT, Llama, Alpaca, T5 models for LLMs and other Natural language processing tasks.
 - I have exposure to working with latest advances in LLM spaces such as using DeepSpeed library, LORA (low-rank adaption),QLORA, PEFT libraries to optimize finetuning of LLMs.
