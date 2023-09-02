@@ -65,7 +65,7 @@ pip install -r requirements.txt
 # Methodology <a id="method"></a>:
 
 - In terms of GEN-AI component, following was achieved:
-  - A dataset was created manually by requesting CHATGPT to generate one-liner tips based on 7 different emotion categories.
+  - A dataset was created manually through prompt-engineering the CHATGPT to generate one-liner tips based on 7 different emotion categories.
   - This dataset was augmented using [pegasus_paraphrase model](https://huggingface.co/tuner007/pegasus_paraphrase) to generate paraphrased instances.
   - [GPT-Neo 1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B) model was fine-tuned using Emotion labels as prompts and pytorch as backend.
   - [Deep Speed](https://github.com/microsoft/DeepSpeed) library was utilized to optimize and speed up training of 1.3Billion parameters model.
