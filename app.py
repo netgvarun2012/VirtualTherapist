@@ -96,10 +96,9 @@ def config():
     st.set_page_config(page_title="Virtual Therapist", page_icon=im)
 
     # Add custom CSS styles
-    st.markdown(
-    """
-    <style>
-    .custom-box {
+    st.markdown("""
+        <style>
+        .mobile-screen {
         border: 2px solid black;
         display: flex;
         flex-direction: column;
@@ -110,9 +109,7 @@ def config():
         border-radius: 10px;
     }
     </style>
-    """,
-    unsafe_allow_html=True,
-    )
+    """, unsafe_allow_html=True)
     # Define a custom style for your title
     title_style = """
     <style>
