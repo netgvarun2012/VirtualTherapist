@@ -69,6 +69,8 @@ pip install -r requirements.txt
   - This dataset was augmented using [pegasus_paraphrase model](https://huggingface.co/tuner007/pegasus_paraphrase) to generate paraphrased instances.
   - [GPT-Neo 1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B) model was fine-tuned using Emotion labels as prompts and pytorch as backend.
   - [Deep Speed](https://github.com/microsoft/DeepSpeed) library was utilized to optimize and speed up training of 1.3Billion parameters model.
+  -  Check this [notebook](https://github.com/netgvarun2012/VirtualTherapist/blob/main/notebooks/Audio%20Processing%20and%20Modelling.ipynb) for more details.
+
     
 - In terms of Speech procesing and modelling , following was achieved:
   - 5 publicly available speech Emotion datasets were concatenated to create a robust dataset.
@@ -77,14 +79,13 @@ pip install -r requirements.txt
   - [Hubeet](https://huggingface.co/docs/transformers/model_doc/hubert) model was fine-tuned with a classification head on preprocessed audio and emotion labels in supervised manner.
   - [BERT](https://huggingface.co/docs/transformers/model_doc/bert) was trained on text transcrition embeddings.
   - Finally, a MultiModal architecture was created and finetuned jointly by concatenating Hubert and BERT embeddings.
-  - More information on the whole process can be found [here](https://github.com/netgvarun2012/VirtualTherapist/blob/main/documentation/Speech_and_Text_based_MultiModal_Emotion_Recognizer.pdf).
+  - More information on the whole process can be found [here](https://github.com/netgvarun2012/VirtualTherapist/blob/main/documentation/Speech_and_Text_based_MultiModal_Emotion_Recognizer.pdf) and in this [notebook](https://github.com/netgvarun2012/VirtualTherapist/blob/main/notebooks/Audio%20Processing%20and%20Modelling.ipynb)
 
 # Deployment <a id="deploy"></a>:
   - Lightweight Streamlit app as a front-end was chosen due to its simplicity and rapid development capabilities, allowing for quick prototyping and user-friendly interaction with complex data and models.
   - All the models were deployed on Hugging Face's Model Hub, a platform known for its accessibility, scalability, and collaborative environment for sharing and accessing state-of-the-art models and solutions.
   - Finally, Hugging Face Spaces was used as the cloud hosting platform ,as it could host such big deep learning models in a very const effective manner.
   - Github repo was utilized for sharing files between local and huggingface repo.
-  - Check this [notebook](https://github.com/netgvarun2012/VirtualTherapist/blob/main/notebooks/Audio%20Processing%20and%20Modelling.ipynb) for more details.
 
 # Highlights <a id="highlights"></a>:
 - This project demonstrates my past experience in working with Generative AI in realms of *'Finetuning'*, *'prompt engineering'* and *'deployment'*.
