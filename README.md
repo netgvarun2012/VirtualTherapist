@@ -69,7 +69,7 @@ pip install -r requirements.txt
   - This dataset was augmented using [pegasus_paraphrase model](https://huggingface.co/tuner007/pegasus_paraphrase) to generate paraphrased instances.
   - [GPT-Neo 1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B) model was fine-tuned using Emotion labels as prompts and pytorch as backend.
   - [Deep Speed](https://github.com/microsoft/DeepSpeed) library was utilized to optimize and speed up training of 1.3Billion parameters model.
-  -  Check this [notebook](https://github.com/netgvarun2012/VirtualTherapist/blob/main/notebooks/Audio%20Processing%20and%20Modelling.ipynb) for more details.
+  -  Check this [notebook](https://github.com/netgvarun2012/VirtualTherapist/blob/main/notebooks/DeepSpeedFineTuningGenAI.ipynb) for more details.
 
     
 - In terms of Speech procesing and modelling , following was achieved:
@@ -84,7 +84,7 @@ pip install -r requirements.txt
 # Deployment <a id="deploy"></a>:
   - Lightweight Streamlit app as a front-end was chosen due to its simplicity and rapid development capabilities, allowing for quick prototyping and user-friendly interaction with complex data and models.
   - All the models were deployed on Hugging Face's Model Hub, a platform known for its accessibility, scalability, and collaborative environment for sharing and accessing state-of-the-art models and solutions.
-  - Finally, Hugging Face Spaces was used as the cloud hosting platform ,as it could host such big deep learning models in a very const effective manner.
+  - *HuggingFace Spaces* was used as the cloud hosting platform ,as it could host such big deep learning models in a very cost-effective manner.
   - Github repo was utilized for sharing files between local and huggingface repo.
 
 # Highlights <a id="highlights"></a>:
