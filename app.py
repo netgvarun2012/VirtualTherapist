@@ -96,21 +96,23 @@ def config():
     st.set_page_config(page_title="Virtual Therapist", page_icon=im)
 
     # Add custom CSS styles
-    st.markdown("""
-        <style>
-        .mobile-screen {
-            border: 3px solid black;            
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Align content to the top */
-            height: 20vh;
-            padding: 40px;
-            border-radius: 10px;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-
+    st.markdown(
+    """
+    <style>
+    .custom-box {
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Align content in the middle */
+        height: 10vh; /* Reduce the height of the box */
+        padding: 10px; /* Reduce padding */
+        border-radius: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+    )
     # Define a custom style for your title
     title_style = """
     <style>
