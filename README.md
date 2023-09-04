@@ -41,6 +41,11 @@ https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/b52c4244-0b8c-
 
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/ce71ea03-3fe1-46eb-a7d2-36676860fc6c
 
+https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/a84be755-0014-453e-b86c-4431bb6fb5fe
+
+
+
+
 # Setup and Requirements <a id="installation"></a>
 For a list of required linux (debian/ubuntu based) packages see the *packages.txt*
 or just install them all at once as below:
