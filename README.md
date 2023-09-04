@@ -21,7 +21,7 @@ Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapis
   * [Setup and Requirements](#installation)
   * [Features](#features)
   * [Methodology](#method)
-  * [Deployment considerations](#deplou)
+  * [Deployment considerations](#deploy)
   * [Highlights](#highlights)
 
 # Introduction <a id="introduction"></a>
