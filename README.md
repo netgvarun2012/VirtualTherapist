@@ -88,7 +88,7 @@ pip install -r requirements.txt
   - Github repo was utilized for sharing files between local and huggingface repo.
 
 # Highlights <a id="highlights"></a>:
-- This project demonstrates my past experience in working with Generative AI in realms of *'Finetuning'*, *'prompt engineering'* and *'deployment'*.
+- This project demonstrates my past experience in working with Generative AI in realms of *'Training', 'Finetuning'*, *'prompt engineering'* and *'deployment'*.
 - While working as Senior NLP Data scientist in a startup, I developed an industry ready GEN AI app  like **'Predictive Writing'** (Please refer to my old [Medium Blog](https://medium.com/@sharmavarun.cs/predictive-writing-using-gpt-transformer-a042d37f7fb3) on this).
 - I also worked on developing other NLP tools from scratch such as **'Grammar Corrector' , 'AI ProofReader' , 'Reverse Dictionary retriever'** and others in the past.
 - During my work with NLP in the startup, I worked on End to End projects involving, PyTorch, FaslAPI, Flask, Machine learning & Deep learning libraries, Amazon AWS cloud sagemaker, S3 Buckets, Azure cloud platform.
