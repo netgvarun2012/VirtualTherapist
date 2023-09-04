@@ -107,5 +107,5 @@ pip install -r requirements.txt
 
 
 
-    
+    Note: Please note that this is a prototype. Model's capabilities can be improved with more time and resources.
 
