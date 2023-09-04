@@ -98,6 +98,12 @@ pip install -r requirements.txt
 - This project also demonstrates my strong experience in working with Speech datasets and speech processing concepts.
 - Also, it demoonstrates my expertise in working with Deep learning, machine learning and other data science concepts.
 - I have used python scripts,streamlit, github,huggingface spaces to develop an EndtoEnd application demonstrating my deployment related skills as well.
+- My previously published articles on Medium:
+ -  https://medium.com/@sharmavarun.cs/power-of-tf-idf-demonstrated-using-pyspark-on-arxiv-dataset-6e12d27c0692
+ -  https://medium.com/@sharmavarun.cs/deep-reinforcement-learning-for-stock-trading-90c6f63d3439
+ -  https://medium.com/@sharmavarun.cs/predictive-writing-using-gpt-transformer-a042d37f7fb3
+ -  https://medium.com/@sharmavarun.cs/demystifying-language-models-7afbcb1a16
+ -  https://medium.com/@sharmavarun.cs/deconvoluting-the-convolution-in-cnns-4357d30b4c65
 
 
 
