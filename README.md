@@ -89,7 +89,8 @@ pip install -r requirements.txt
 
 # Highlights <a id="highlights"></a>:
 - This project demonstrates my past experience in working with Generative AI in realms of *'Finetuning'*, *'prompt engineering'* and *'deployment'*.
-- I have developed industry ready apps like **'Predictive Writing'** (Please refer to my old [Medium Blog](https://medium.com/@sharmavarun.cs/predictive-writing-using-gpt-transformer-a042d37f7fb3) on this).
+- While working as Senior NLP Data scientist in a startupm I have developed industry ready GEN AI apps  like **'Predictive Writing'** (Please refer to my old [Medium Blog](https://medium.com/@sharmavarun.cs/predictive-writing-using-gpt-transformer-a042d37f7fb3) on this).
+- I also worked on developing other NLP tools from scratch such as **'Grammar Corrector' , 'AI ProofReader' , 'Reverse Dictionary retriever'** and others using Deep learning , pandas, fastAPI packages. 
 - I have also worked extensively on exploring the customization of the core generative AI transformers libraries and other capabilities - for e.g.  integrated [GeDi](https://blog.salesforceairesearch.com/gedi/) model with GPT-neo model for coherence song lyrics generation while working for NUS computing and submitted a paper in ACMMM 23 conference.
 - I have experience in using ChatGPT, Llama, Alpaca, T5 models for LLMs and other Natural language processing tasks.
 - I have exposure to working with latest advances in LLM spaces such as using DeepSpeed library, LORA (low-rank adaption),QLORA, PEFT libraries to optimize finetuning of LLMs.
