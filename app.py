@@ -355,9 +355,12 @@ def GenerateText(emo,gpt_tokenizer,gpt_model,t_val,t_k,t_p):
     and displays multiple generated text samples.
 
     Parameters:
-        emo (str): The emotion for which text should be generated.
-        gpt_tokenizer: Tokenizer for processing the GPT-2 model input.
-        gpt_model: The GPT-2 model for text generation.
+    - emo (str): The input emotion for text generation.
+    - gpt_tokenizer (transformers.PreTrainedTokenizer): The tokenizer for GPT-3 model.
+    - gpt_model (transformers.PreTrainedModel): The GPT-3 model for text generation.
+    - t_val (float): The temperature value for controlling text randomness.
+    - t_k (int): The top-k value for controlling text generation diversity.
+    - t_p (float): The top-p value for controlling text generation diversity.
 
     Returns:
         None
