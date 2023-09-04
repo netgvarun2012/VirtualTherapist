@@ -45,6 +45,10 @@ https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/73b3a54c-e92f-
 
 https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/37c38da4-8da6-4c0f-8d89-8f0fb30c79c0
 
+https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/bd33575f-f722-4321-a56e-04669b77ed18
+
+https://github.com/netgvarun2012/VirtualTherapist/assets/93938450/50ca7626-1e58-43c8-bd5f-c91e6fec01b5
+
 
 
 
