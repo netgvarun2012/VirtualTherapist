@@ -14,6 +14,7 @@ license: mit
 
 Check out the app at https://huggingface.co/spaces/netgvarun2005/VirtualTherapist
 
+Check out the presentation [here](https://github.com/netgvarun2012/VirtualTherapist/blob/main/documentation/VirtualTherapist-GenAIApp.pptx)
 
 # Table of Contents
   * [Introduction](#introduction)
