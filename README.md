@@ -94,7 +94,7 @@ pip install -r requirements.txt
   - [Hubeet](https://huggingface.co/docs/transformers/model_doc/hubert) model was fine-tuned with a classification head on preprocessed audio and emotion labels in supervised manner.
   - [BERT](https://huggingface.co/docs/transformers/model_doc/bert) was trained on text transcrition embeddings.
   - Finally, a MultiModal architecture was created and finetuned jointly by concatenating Hubert and BERT embeddings.
-  - More information on the whole process can be found [here](https://github.com/netgvarun2012/VirtualTherapist/blob/main/documentation/Speech_and_Text_based_MultiModal_Emotion_Recognizer.pdf) and in this [notebook](https://github.com/netgvarun2012/VirtualTherapist/blob/main/notebooks/Audio%20Processing%20and%20Modelling.ipynb)
+  - More information on the whole process can be found in this [notebook](https://github.com/netgvarun2012/VirtualTherapist/blob/main/notebooks/Audio%20Processing%20and%20Modelling.ipynb)
 
 # Deployment <a id="deploy"></a>:
   - Lightweight Streamlit app as a front-end was chosen due to its simplicity and rapid development capabilities, allowing for quick prototyping and user-friendly interaction with complex data and models.
